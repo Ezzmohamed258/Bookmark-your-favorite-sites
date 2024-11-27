@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark</title>
+    <link rel="icon" href="./images/Bookmark.png">
+    <!-- ===== Font Awesome icon library ===== -->
+    <link rel="stylesheet" href="Css/all.min.css">
+    <!-- ===== Google Fonts ===== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap" rel="stylesheet">
+    <!-- ===== Bootstrap ===== -->
+     <link rel="stylesheet" href="Css/bootstrap.min.css">
+    <!-- ===== Main style sheet ===== -->
+     <link rel="stylesheet" href="Css/stylesheet.css">
+
+</head>
+<body>
+    <section>
+        <div class="container py-5">
+            <h1 class="mx-auto py-3 position-relative">Bookmarker</h1>
+            <div class="box-input">
+                <h2 class="text-center mb-5"><i class="fa-solid fa-bookmark"></i> Bookmark your favorite sites <i class="fa-solid fa-bookmark"></i></h2>
+
+                <!-- <div id="formAlert" class="alert alert-danger d-none text-center">This form is invalid.</div> -->
+
+                <div id="formAlert" class="light-Container d-none">
+                    <div class="Box">
+                        <div class="box.icon" >
+                            <div class="icon">
+                                <i class="fa-solid fa-circle" style="color: #f31212;"></i>
+                                <i class="fa-solid fa-circle" style="color: #FFD43B;"></i>
+                                <i class="fa-solid fa-circle" style="color: #4ef312;"></i>
+                            </div>
+                          <i id="close" class="fa-solid fa-xmark position-absolute top-0 end-0"></i>
+                        </div>
+                      <p class="fw-bold pt-4">Site Name or Url is not valid, Please follow the <br> rules below :</p>
+                      <ul class="list-unstyled">
+                        <li class="pb-2 d-flex align-items-center">
+                             <i class="fa-solid fa-circle-arrow-right me-2" style="color: #7f271a;"></i> 
+                             <h6>Site name must start with one uppercase letter (A-Z),<br>up to 10 lowercase letters (a-z) following it.</h6>
+                        </li>
+                        <li class="d-flex align-items-center">
+                             <i class="fa-solid fa-circle-arrow-right me-2" style="color: #7f271a;"></i>
+                             <h6 class="m-0">Site URL must be a valid one</h6>
+                        </li>
+                      </ul>
+                    </div>
+                </div>
+
+
+                <label for="siteName" class="form-label fw-bold"><span><i class="fa-solid fa-book-bookmark pe-2"></i></span>Site Name</label>
+                <input type="text" oninput="valditionForm(this)" id="siteName" class="form-control mb-4" placeholder="Bookmark Name">
+                
+
+                <label for="websiteurl" class="form-label fw-bold"><span><i class="fa-solid fa-link pe-2"></i></span>Site URL</label>
+                <input type="url" oninput="valditionForm(this)" id="websiteurl" class="form-control" placeholder="website URL">
+                
+
+                <div class="Submit text-center pt-4">
+                    <button onclick="submit()" id="btnSubmit" class="btn px-5">Submit</button>
+                </div>
+            </div>
+            <table class="table text-center my-4">
+                <thead>
+                  <tr>
+                    <th scope="col">Index</th>
+                    <th scope="col">Website Name</th>
+                    <th scope="col">Visit</th>
+                    <th scope="col">Delete</th>
+                  </tr>
+                </thead>
+                <tbody id="tBody">
+                  
+                  
+                  
+                </tbody>
+            </table>
+
+        </div>
+    </section>
+
+    
+    
+
+
+
+
+ <script src="Js/bootstrap.bundle.min.js"></script>
+ <script src="Js/index.js"></script>   
+</body>
+</html>

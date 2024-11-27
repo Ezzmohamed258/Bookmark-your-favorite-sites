@@ -1,0 +1,96 @@
+.righteous-regular {
+  font-family: "Righteous", sans-serif;
+}
+/* .pt-sans-caption-bold {
+  font-family: "PT Sans Caption", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+.pacifico-regular {
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
+} */
+:root {
+  --primary-font: "Pacifico", cursive;
+  --secondary-font: "PT Sans Caption", sans-serif;
+}
+body {
+  background-color: #f7ecde;
+}
+::selection{
+  background-color: #fec260;
+  color: #000;
+}
+h1 {
+  font-family: var(--primary-font);
+  font-size: 50px;
+  width: fit-content;
+}
+h1::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 20%;
+  left: 0;
+  bottom: 18px;
+  background-color: #fec260;
+  transition: height .5s;
+  z-index: -1;
+}
+h1:hover::before {
+  height: 40%;
+}
+.box-input h2 {
+  font-family: "Righteous", cursive;
+  font-size: 25px;
+  background-image: linear-gradient(to right, #3ca55c, #b5ac49);
+  background-clip: text;
+  color: transparent;
+}
+.box-input {
+  border-top: 2px dotted black;
+  border-bottom: 2px dotted black;
+  padding: 24px 16px;
+  margin-top: 40px;
+}
+.form-control:focus {
+  border-color: #d99c39;
+  box-shadow: 0 0 0 0.25rem #fec26055;
+}
+#btnSubmit {
+  background-color: #d1512d;
+  color: white;
+}
+.table th{
+    font-family:var(--secondary-font);
+}
+.light-Container{
+  position: fixed;
+  background-color: rgba(0, 0, 0, .5);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Box{
+  width: 35%;
+  height: 35vh;
+  background-color: white;
+  position: relative;
+  padding: 15px;
+  border-radius: 10px;
+}
+.box.icon {
+  display: flex;
+  justify-content: space-between;
+}
+.Box #close{
+  font-size: 24px;
+  color: black;
+  padding: 15px;
+  cursor: pointer;
+}
